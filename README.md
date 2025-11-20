@@ -1,36 +1,72 @@
-# 🏫 Django School Project Manager
+# 🏫 School Management System (Django)
 
-**Topic:** Django School Project Manager (CRUD + Authentication + Admin Panel)  
+A simple and clean School Management System built using **Django**, where users can:
 
----
+- Register & Login
+- Add Students
+- Update Students
+- Delete Students
+- View Students List
+- Manage Classrooms
+- Assign each student to a classroom
 
-## 📖 Project Description
-
-The **Django School Project Manager** is a web application built with Django that allows schools to efficiently manage students and classrooms. It demonstrates core Django functionalities including CRUD operations, user authentication, and the use of the Django admin panel.
-
-Key features include:
-
-- **Student Management:** Add, update, delete, and view student records. Each student is linked to a classroom for better organization.
-- **Classroom Management:** Maintain classrooms with names and grades, enabling a clear structure for student assignments.
-- **User Authentication:** Secure registration, login, and logout functionality using Django’s built-in forms. Only authenticated users can manage student data.
-- **Admin Panel:** Django’s admin panel is configured to manage Students and Classrooms. Superuser access is required to utilize admin privileges.
-
-This project is suitable for learning and demonstrating Django’s core features in a real-world scenario. It provides a clean separation between application logic, user interface, and administrative functionality, making it both educational and practical.
+This project is fully responsive and uses **Bootstrap 5** for modern UI.
 
 ---
 
 ## 🚀 Features
 
-- 🧑‍🎓 **Student Management**
-- 🏫 **Classroom Management**
-- 🔐 **User Authentication** (Register, Login, Logout)
-- ⚙️ **Admin Panel** (Superuser required)
+### 👨‍🎓 Student Management
+- Add new students  
+- Edit student details  
+- Delete students  
+- List all students in a table  
+- Assign classroom to students  
+
+### 🏫 Classroom Management
+- Add classrooms  
+- Edit classrooms  
+- Delete classrooms  
+- List all classrooms  
+
+### 🔐 Authentication
+- User Registration  
+- User Login  
+- User Logout  
 
 ---
 
-## 🛠️ Setup Instructions
+## 📂 Project Structure
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/banumariwan/17_school_project_manager.git
-   cd 17_school_project_manager
+
+
+school_project/
+│── manage.py
+│── school_project/ # Main project folder
+│── students/ # App for students & classrooms
+│ │── models.py
+│ │── views.py
+│ │── forms.py
+│ │── urls.py
+│ │── templates/
+│── templates/ # HTML templates
+
+
+
+## 🛠️ Technologies Used
+
+- Python 3  
+- Django (latest)  
+- Bootstrap 5  
+- SQLite (default database)  
+
+
+
+
+
+Visit the app at:
+
+👉 http://127.0.0.1:8000/
+
+
+

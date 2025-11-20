@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
-<body>
-<h2>Register</h2>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
-<a href="{% url 'login_user' %}">Already Have An Account? Login</a>
+
+<body class="bg-light">
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+    <div class="card shadow-lg p-4" style="width:100%; max-width:450px; border-radius:12px;">
+
+        <h2 class="text-center mb-4 fw-bold text-success">Register</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+            </div>
+
+            <button type="submit" class="btn btn-success w-100 mt-2">Register</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="{% url 'login_user' %}" class="text-decoration-none">
+                Already have an account? <strong>Login</strong>
+            </a>
+        </div>
+
+    </div>
+</div>
+
 </body>
 </html>

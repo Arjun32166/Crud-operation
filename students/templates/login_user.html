@@ -3,14 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
-<body>
-<h2>Login</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
-<a href="{% url 'register_user' %}">Do Not Have An Account? Register</a>
+
+<body class="bg-light">
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height:100vh;">
+    <div class="card shadow-lg p-4" style="width:100%; max-width:400px; border-radius:12px;">
+
+        <h2 class="text-center mb-4 fw-bold text-primary">Login</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="{% url 'register_user' %}" class="text-decoration-none">
+                Don't have an account? <strong>Register</strong>
+            </a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
